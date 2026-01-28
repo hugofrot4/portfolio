@@ -4,11 +4,15 @@ import Container from "./Container";
 import MenuContent from "./MenuContent";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ days }: { days: number }) {
     const [menuMobileOpen, setMenuMobileOpen] = useState(false);
 
     const handleMenuMobile = () => {
         setMenuMobileOpen(!menuMobileOpen);
+    }
+
+    const formatVol = (n: number | string) => {
+        return String(n).padStart(2, "0");
     }
 
     return (
@@ -18,11 +22,11 @@ export default function Navbar() {
                     <div className="flex items-center w-full justify-between py-4">
                         <div className="flex items-center">
                             <div className="flex flex-col font-bold uppercase tracking-widest text-xs pr-2 md:pr-6 border-r border-foreground/20">
-                                <span className="text-primary">Vol. 00</span>
+                                <span className="text-primary">Vol. {formatVol(days)}</span>
                                 <span>Janeiro, 2026</span>
                             </div>
                             <div className="flex items-center pl-2 md:pl-6 gap-2">
-                                <Newspaper className="md:size-7"/>
+                                <Newspaper className="md:size-7" />
                                 <a href="#">
                                     <h1 className="uppercase font-black font-display text-lg md:text-4xl md:pb-1 hover:underline decoration-2 decoration-primary">The Portfolio</h1>
                                 </a>

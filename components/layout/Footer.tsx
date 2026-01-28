@@ -16,7 +16,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <div>
-                        <h4 className="font-bold uppercase tracking-widest text-xs mb-4 border-b border-foreground/20 pb-2">Connect</h4>
+                        <h4 className="font-bold uppercase tracking-widest text-xs mb-4 border-b border-foreground/20 pb-2">Conecte-se</h4>
                         <ul className="space-y-2 text-sm">
                             <li><a className="hover:text-primary hover:underline" href="#">Twitter / X</a></li>
                             <li><a className="hover:text-primary hover:underline" href="#">LinkedIn</a></li>

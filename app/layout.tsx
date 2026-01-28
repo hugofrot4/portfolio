@@ -3,6 +3,7 @@ import { Newsreader, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { daysSince } from "@/utils/daysSince";
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
@@ -24,12 +25,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const days = daysSince(process.env.START_DATE);
+
   return (
     <html lang="pt-BR">
       <body
-        className={`${newsreader.variable} ${playfairDisplay.variable} antialiased`}
+        className={`${newsreader.variable} ${playfairDisplay.variable} antialiased selection:bg-primary selection:text-white`}
       >
-        <Navbar />
+        <Navbar days={days} />
         {children}
         <Footer />
       </body>
