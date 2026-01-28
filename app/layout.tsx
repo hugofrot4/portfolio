@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Newsreader, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
@@ -24,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${newsreader.variable} ${playfairDisplay.variable} antialiased`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

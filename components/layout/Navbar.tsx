@@ -24,7 +24,7 @@ export default function Navbar() {
                             <div className="flex items-center pl-2 md:pl-6 gap-2">
                                 <Newspaper className="md:size-7"/>
                                 <a href="#">
-                                    <h1 className="uppercase font-bold font-display text-lg md:text-4xl md:pb-1">The Portfolio</h1>
+                                    <h1 className="uppercase font-black font-display text-lg md:text-4xl md:pb-1 hover:underline decoration-2 decoration-primary">The Portfolio</h1>
                                 </a>
                             </div>
                         </div>
